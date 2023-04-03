@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import '../../model/data/user.dart';
 
-enum AppStatus { authenticated, unauthenticated, gotosignup }
+enum AppStatus { authenticated, unauthenticated}
 
 class AuthenticationState extends Equatable {
   final AppStatus status;
@@ -13,9 +13,7 @@ class AuthenticationState extends Equatable {
   const AuthenticationState.unauthenticated()
       : status = AppStatus.unauthenticated,
         user = User.empty;
-  const AuthenticationState.gotosignup()
-      : status = AppStatus.gotosignup,
-        user = User.empty;
+
   @override
   List<Object> get props => [status, user];
 }

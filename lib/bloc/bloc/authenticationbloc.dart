@@ -1,7 +1,4 @@
 import 'dart:async';
-
-import 'package:flutter/material.dart';
-
 import '../../model/data/user.dart';
 import '../../model/repository/authentication_repository.dart';
 import '../event/authentication_event.dart';
@@ -33,6 +30,7 @@ class AuthenticationBloc
       AuthenticationEvent event, Emitter<AuthenticationState> emit) {
     unawaited(_authrepo.logout());
   }
+
 
   @override
   Future<void> close() {
